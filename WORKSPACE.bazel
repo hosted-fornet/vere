@@ -115,6 +115,8 @@ rules_foreign_cc_dependencies(
 versioned_http_archive(
     name = "aes_siv",
     build_file = "//bazel/third_party/aes_siv:aes_siv.BUILD",
+    patch_args = ["-p1"],
+    patches = ["//bazel/third_party/aes_siv:{version}.patch"],
     sha256 = "1916a428dff480e06b09dc0fb1c9d849c048f838dc9b8d141452233b508f6bb1",
     strip_prefix = "libaes_siv-{version}",
     url = "https://github.com/dfoxfranke/libaes_siv/archive/{version}.tar.gz",
@@ -124,6 +126,8 @@ versioned_http_archive(
 versioned_http_archive(
     name = "argon2",
     build_file = "//bazel/third_party/argon2:argon2.BUILD",
+    patch_args = ["-p1"],
+    patches = ["//bazel/third_party/argon2:{version}.patch"],
     sha256 = "40850e6e6324be10f14228d17b617ad2074bb926eeddd6fe40ad5df833833949",
     strip_prefix = "argon2-{version}",
     url = "https://github.com/urbit/argon2/archive/{version}.tar.gz",
@@ -148,6 +152,8 @@ versioned_http_file(
 versioned_http_archive(
     name = "curl",
     build_file = "//bazel/third_party/curl:curl.BUILD",
+    patch_args = ["-p1"],
+    patches = ["//bazel/third_party/curl:{version}.patch"],
     sha256 = "78a06f918bd5fde3c4573ef4f9806f56372b32ec1829c9ec474799eeee641c27",
     strip_prefix = "curl-{version}",
     url = "https://curl.se/download/curl-{version}.tar.gz",
@@ -254,6 +260,8 @@ versioned_http_archive(
 versioned_http_archive(
     name = "openssl",
     build_file = "//bazel/third_party/openssl:openssl.BUILD",
+    patch_args = ["-p1"],
+    patches = ["//bazel/third_party/openssl:{version}.patch"],
     sha256 = "d7939ce614029cdff0b6c20f0e2e5703158a489a72b2507b8bd51bf8c8fd10ca",
     strip_prefix = "openssl-{version}",
     url = "https://www.openssl.org/source/openssl-{version}.tar.gz",
@@ -275,6 +283,8 @@ versioned_http_archive(
 versioned_http_archive(
     name = "secp256k1",
     build_file = "//bazel/third_party/secp256k1:secp256k1.BUILD",
+    patch_args = ["-p1"],
+    patches = ["//bazel/third_party/secp256k1:{version}.patch"],
     sha256 = "5f6e4a66bf8f3c318d91eacbf3262d1cd81a3fda6bb9af267b54cf38ffd44b1c",
     strip_prefix = "secp256k1-{version}",
     url = "https://github.com/bitcoin-core/secp256k1/archive/{version}.tar.gz",
@@ -335,6 +345,8 @@ versioned_http_archive(
 versioned_http_archive(
     name = "whereami",
     build_file = "//bazel/third_party/whereami:whereami.BUILD",
+    patch_args = ["-p1"],
+    patches = ["//bazel/third_party/whereami:{version}.patch"],
     sha256 = "1d8744177f37e8386ec2f6c5992592399040cb93535ed4fd253e1976f889a744",
     strip_prefix = "whereami-{version}",
     url = "https://github.com/gpakosz/whereami/archive/{version}.tar.gz",

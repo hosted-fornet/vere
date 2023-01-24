@@ -1,0 +1,39 @@
+diff --git a/example/executable.c b/example/executable.c
+index fd8f695..7082b19 100644
+--- a/example/executable.c
++++ b/example/executable.c
+@@ -2,7 +2,7 @@
+ #include <stdio.h>
+ #include <string.h>
+ 
+-#include <whereami.h>
++#include "whereami.h"
+ 
+ #if defined(_WIN32)
+ 
+diff --git a/example/library.c b/example/library.c
+index 8f4266f..42d0a5f 100644
+--- a/example/library.c
++++ b/example/library.c
+@@ -1,7 +1,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ 
+-#include <whereami.h>
++#include "whereami.h"
+ 
+ #if defined(__GNUC__) && !defined(_WIN32)
+ __attribute__((constructor))
+diff --git a/src/whereami.c b/src/whereami.c
+index 97f7f85..39324d1 100644
+--- a/src/whereami.c
++++ b/src/whereami.c
+@@ -5,7 +5,7 @@
+ 
+ // in case you want to #include "whereami.c" in a larger compilation unit
+ #if !defined(WHEREAMI_H)
+-#include <whereami.h>
++#include "whereami.h"
+ #endif
+ 
+ #ifdef __cplusplus

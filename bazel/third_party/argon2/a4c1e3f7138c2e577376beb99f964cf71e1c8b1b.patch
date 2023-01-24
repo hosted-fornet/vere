@@ -1,0 +1,26 @@
+diff --git a/src/blake2/blake2.h b/src/blake2/blake2.h
+index 57276a7..89d8baa 100644
+--- a/src/blake2/blake2.h
++++ b/src/blake2/blake2.h
+@@ -18,7 +18,7 @@
+ #ifndef PORTABLE_BLAKE2_H
+ #define PORTABLE_BLAKE2_H
+ 
+-#include <argon2.h>
++#include "argon2.h"
+ 
+ #if defined(__cplusplus)
+ extern "C" {
+diff --git a/src/core.h b/src/core.h
+index 78000ba..a9c73fd 100644
+--- a/src/core.h
++++ b/src/core.h
+@@ -156,7 +156,7 @@ uint32_t index_alpha(const argon2_instance_t *instance,
+  * an error code
+  * @param context Pointer to current Argon2 context
+  * @return ARGON2_OK if everything is all right, otherwise one of error codes
+- * (all defined in <argon2.h>
++ * (all defined in "argon2.h"
+  */
+ int validate_inputs(const argon2_context *context);
+ 

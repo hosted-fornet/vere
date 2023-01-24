@@ -1,0 +1,34 @@
+diff --git a/aes_siv.c b/aes_siv.c
+index 00a510d..1ce4c56 100644
+--- a/aes_siv.c
++++ b/aes_siv.c
+@@ -21,9 +21,9 @@
+ #endif
+ #include <string.h>
+ 
+-#include <openssl/cmac.h>
+-#include <openssl/crypto.h>
+-#include <openssl/evp.h>
++#include "openssl/cmac.h"
++#include "openssl/crypto.h"
++#include "openssl/evp.h"
+ 
+ #ifdef ENABLE_CTGRIND
+ #include <ctgrind.h>
+diff --git a/tests.c b/tests.c
+index 996cc58..92c4e4f 100644
+--- a/tests.c
++++ b/tests.c
+@@ -14,9 +14,9 @@
+ #include <stdio.h>
+ #include <string.h>
+ 
+-#include <openssl/crypto.h>
+-#include <openssl/evp.h>
+-#include <openssl/opensslv.h>
++#include "openssl/crypto.h"
++#include "openssl/evp.h"
++#include "openssl/opensslv.h"
+ 
+ static void debug(const char *label, const unsigned char *hex, size_t len) {
+         size_t i;

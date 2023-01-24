@@ -1,0 +1,71 @@
+diff --git a/contrib/lax_der_parsing.h b/contrib/lax_der_parsing.h
+index 034a38e..27ade9d 100644
+--- a/contrib/lax_der_parsing.h
++++ b/contrib/lax_der_parsing.h
+@@ -56,7 +56,7 @@
+    files (such as tests.c) without the need to set an explicit -I flag,
+    which would be necessary to locate secp256k1.h. */
+ #ifndef SECP256K1_H
+-#include <secp256k1.h>
++#include "secp256k1.h"
+ #endif
+ 
+ #ifdef __cplusplus
+diff --git a/contrib/lax_der_privatekey_parsing.h b/contrib/lax_der_privatekey_parsing.h
+index 1a8ad8a..63f90d7 100644
+--- a/contrib/lax_der_privatekey_parsing.h
++++ b/contrib/lax_der_privatekey_parsing.h
+@@ -33,7 +33,7 @@
+    files (such as tests.c) without the need to set an explicit -I flag,
+    which would be necessary to locate secp256k1.h. */
+ #ifndef SECP256K1_H
+-#include <secp256k1.h>
++#include "secp256k1.h"
+ #endif
+ 
+ #ifdef __cplusplus
+diff --git a/examples/ecdh.c b/examples/ecdh.c
+index d7e8add..78ef117 100644
+--- a/examples/ecdh.c
++++ b/examples/ecdh.c
+@@ -11,8 +11,8 @@
+ #include <assert.h>
+ #include <string.h>
+ 
+-#include <secp256k1.h>
+-#include <secp256k1_ecdh.h>
++#include "secp256k1.h"
++#include "secp256k1_ecdh.h"
+ 
+ #include "random.h"
+ 
+diff --git a/examples/ecdsa.c b/examples/ecdsa.c
+index 434c856..a941f9f 100644
+--- a/examples/ecdsa.c
++++ b/examples/ecdsa.c
+@@ -11,7 +11,7 @@
+ #include <assert.h>
+ #include <string.h>
+ 
+-#include <secp256k1.h>
++#include "secp256k1.h"
+ 
+ #include "random.h"
+ 
+diff --git a/examples/schnorr.c b/examples/schnorr.c
+index 82eb07d..51a87fc 100644
+--- a/examples/schnorr.c
++++ b/examples/schnorr.c
+@@ -11,9 +11,9 @@
+ #include <assert.h>
+ #include <string.h>
+ 
+-#include <secp256k1.h>
+-#include <secp256k1_extrakeys.h>
+-#include <secp256k1_schnorrsig.h>
++#include "secp256k1.h"
++#include "secp256k1_extrakeys.h"
++#include "secp256k1_schnorrsig.h"
+ 
+ #include "random.h"
+ 
